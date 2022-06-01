@@ -19,6 +19,7 @@ class Characters(db.Model):
     img_url = db.Column(db.String(500), nullable=False)
 
 
+# db.create_all()
 # SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
 # SERVICE_ACCOUNT_FILE = 'dislyte-c2e741e0964b.json'
 # creds = None
@@ -49,7 +50,7 @@ class Characters(db.Model):
 #         "rate": value[3],
 #     }
 #     characters.append(character)
-
+#
 # for char in characters:
 #     i = str(characters.index(char))
 #     new_char = Characters(
@@ -59,8 +60,8 @@ class Characters(db.Model):
 #         rate=char["rate"],
 #         img_url="/images/esper" + i
 #     )
-# db.session.add(new_char)
-# db.session.commit()
+#     db.session.add(new_char)
+#     db.session.commit()
 
 @app.route("/")
 def home():
