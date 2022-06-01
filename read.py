@@ -1,7 +1,3 @@
-import esper as esper
-from googleapiclient.discovery import build
-from google.oauth2 import service_account
-from pprint import pprint
 from flask import Flask, jsonify, send_from_directory
 from flask_sqlalchemy import SQLAlchemy
 import os
