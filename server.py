@@ -1,5 +1,6 @@
 from flask import Flask, jsonify, send_from_directory
 from flask_sqlalchemy import SQLAlchemy
+import psycopg2
 import os
 
 app = Flask(__name__)
