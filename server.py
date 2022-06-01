@@ -62,6 +62,9 @@ class Characters(db.Model):
 # db.session.add(new_char)
 # db.session.commit()
 
+@app.route("/")
+def home():
+    return "hi"
 
 @app.route("/all")
 def get_all_char():
