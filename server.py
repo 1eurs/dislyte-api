@@ -86,8 +86,8 @@ def get_all_char():
 
 
 @app.route('/images/<esper>')
-def get_image(esper_):
-    return send_from_directory(directory="static/images", path=f"{esper}.png")
+def get_image(esper):
+    return send_from_directory(directory="images/", path=f"{esper}.png")
 
 
 if __name__ == "__main__":
