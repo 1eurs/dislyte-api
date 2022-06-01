@@ -73,7 +73,7 @@ def get_all_char():
     chars = db.session.query(Characters).all()
     chars_list = []
     for chars_value in chars:
-        characters_ = {
+        characters = {
             "id": chars_value.id,
             "name": chars_value.name,
             "role": chars_value.role,
@@ -81,13 +81,13 @@ def get_all_char():
             "stars": chars_value.stars,
             "rate": chars_value.rate,
         }
-        chars_list.append(characters_)
+        chars_list.append(characters)
     return jsonify(chars_list)
 
 
-@app.route('/images/<esper_>')
+@app.route('/images/<esper>')
 def get_image(esper_):
-    return send_from_directory(directory="static/images", path=f"{esper_}.png")
+    return send_from_directory(directory="static/images", path=f"{esper}.png")
 
 
 if __name__ == "__main__":
